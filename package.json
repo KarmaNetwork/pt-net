@@ -1,0 +1,28 @@
+{
+  "name": "p2p",
+  "version": "0.1.0",
+  "description": "P2P network connect using WebRTC",
+  "main": "index.js",
+  "scripts": {
+    "boot": "node test/boot.js"
+  },
+  "author": "tiannian dtiannian@aliyun.com",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "buffer": "^5.2.1",
+    "simple-peer": "^9.4.0",
+    "store": "^2.0.12",
+    "tweetnacl": "^1.0.1"
+  },
+  "devDependencies": {
+    "@koa/router": "^8.0.0",
+    "axios": "^0.19.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
+    "koa-websocket": "^6.0.0",
+    "stun": "^2.0.0",
+    "wrtc": "^0.4.1",
+    "ws": "^7.1.1"
+  }
+}
