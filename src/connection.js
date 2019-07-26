@@ -76,6 +76,7 @@ class AlptP2P {
         this.peers[pk] = {
             peer: peer,
             connected: false,
+            publicKey: Buffer.from(pk,'hex')
         };
     }
 
@@ -90,6 +91,7 @@ class AlptP2P {
             this.peers[pk] = {
                 peer: peer,
                 connected: false,
+                publicKey: Buffer.from(pk, 'hex')
             }
 
             peer.on('connect', () => {
