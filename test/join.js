@@ -3,7 +3,7 @@ const wrtc = require('wrtc');
 
 const AlptP2P = require('../src/connection.js');
 
-const ws = new Websocket('ws://45.76.223.13:3000/bootstrap');
+const ws = new Websocket('ws://127.0.0.1:3000/bootstrap');
 
 ws.on('open', () => {
     let p2p = new AlptP2P( {
@@ -25,7 +25,7 @@ ws.on('open', () => {
         p2p.recv_bootstrap(d.pk, d.data);
     });
 
-    let pk = '08f1f9ecb0a9cf94bc58e6902fc80b8e5dcd2c8a0173ae46ac17d1f78d55e757'
+    let pk = 'b2ff8520baf601c1161880ed2d754ad774f731fb5b745e78bbbb47d336122a69'
 
     p2p.bootstrap({
         pk: pk,

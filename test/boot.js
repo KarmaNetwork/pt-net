@@ -22,6 +22,9 @@ let p2p = new AlptP2P( {
                 pk: p2p.get_hex_key().publicKey,
                 data: data
             }))
+        },
+        recv_data(pk, data) {
+            console.log(`recv data from ${pk},data is : ${data}`);
         }
     }
 } );

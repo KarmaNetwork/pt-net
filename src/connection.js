@@ -73,6 +73,11 @@ class AlptP2P {
             }
         });
 
+        peer.on('data', data => {
+            // Need add crypto
+            this.handlers.recv_data(pk,data);
+        });
+
         this.peers[pk] = {
             peer: peer,
             connected: false,
@@ -113,6 +118,11 @@ class AlptP2P {
                 this.handlers.send_bootstrap(pk, data);
             })
 
+            peer.on('data', data => {
+                // Need add crypto
+                this.handlers.recv_data(pk,data);
+            });
+
             peer.on('error', (err) => {
                 // delete?
                 console.log(pk, 'is error')
@@ -146,7 +156,6 @@ class AlptP2P {
             return false;
         }
     }
-
 }
 
 module.exports = AlptP2P
